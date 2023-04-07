@@ -43,7 +43,7 @@ view: orders {
   }
   measure: user_count {
     type: number
-    sql: case when ${count}>=25 then count_user_id else 0 end ;;
+    sql: case when ${count}>=25 then ${count_user_id} else 0 end ;;
 
   }
 
