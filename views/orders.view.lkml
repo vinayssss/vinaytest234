@@ -37,6 +37,15 @@ view: orders {
     type: count
     drill_fields: [detail*]
   }
+  measure: count_user_id {
+    type: count_distinct
+    sql: ${user_id} ;;
+  }
+  measure: user_count {
+    type: count_distinct
+    sql: case when count>=25 then count_user_id else 0 end ;;
+
+  }
 
   # ----- Sets of fields for drilling ------
   set: detail {
