@@ -8,6 +8,20 @@ datagroup: vinaytest234_default_datagroup {
   max_cache_age: "1 hour"
 }
 
+# Place in `vinaytest234` model
+explore: +order_items {
+
+    query: order_count_year {
+      dimensions: [orders.created_year]
+      measures: [orders.count]
+      timezone: "UTC"
+    }
+
+
+
+}
+
+
 persist_with: vinaytest234_default_datagroup
 
 
