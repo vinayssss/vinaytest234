@@ -20,6 +20,17 @@ explore: +order_items {
 
 
 }
+# Place in `vinaytest234` model
+explore: +order_items {
+
+    query: user_details{
+      dimensions: [users.email, users.first_name, users.gender, users.id]
+    }
+
+
+
+}
+
 
 
 persist_with: vinaytest234_default_datagroup
