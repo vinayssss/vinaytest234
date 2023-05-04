@@ -67,7 +67,10 @@ view: users {
     type: zipcode
     sql: ${TABLE}.zip ;;
   }
-
+  dimension: country_1 {
+    sql: ${TABLE}.country ;;
+    drill_fields: [state, city]
+  }
   measure: count {
     type: count
     drill_fields: [detail*]
