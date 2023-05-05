@@ -72,11 +72,12 @@ view: users {
     drill_fields: [state, city]
   }
   dimension: state1 {
+    type: string
+    sql: ${TABLE}.city ;;
     link: {
-      label: "Google"
-      url: "http://www.google.com/search?q={{ state1 }}"
-      icon_url: "http://google.com/"
-    }
+      label: "State Details"
+      url: "http://www.google.com/search?q={{ value }}"
+  }
   }
   measure: count {
     type: count
