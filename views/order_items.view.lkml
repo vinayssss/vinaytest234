@@ -56,6 +56,14 @@ view: order_items {
   measure: total_sale_price {
     type: sum
     sql: ${sale_price} ;;
+    html:
+    {% if value > 10 %}
+    <font color="darkgreen">{{ rendered_value }}</font>
+    {% elsif value > 11 %}
+    <font color="goldenrod">{{ rendered_value }}</font>
+    {% else %}
+    <font color="darkred">{{ rendered_value }}</font>
+    {% endif %} ;;
     value_format_name: usd_0
   }
   measure: avg_sale_price {
