@@ -232,6 +232,7 @@ explore: ten_million_orders {
 explore: test {}
 
 explore: users {}
+explore: derived_tables {}
 
 explore: user_data {
   join: users {
