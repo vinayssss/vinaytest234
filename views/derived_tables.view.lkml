@@ -17,12 +17,5 @@ view: derived_tables {
     value_format: "$#,##0"
     type: number
   }
-  dimension: state {
-    type: string
-    sql: ${TABLE}.state ;;
-  }
-  filter: states {
-    type: string
-    suggest_dimension: state
-  }
+
 }
