@@ -5,15 +5,10 @@ view: derived_tables {
   derived_table: {
     explore_source: order_items {
       column: id { field: orders.id }
-      column: id {}
       column: total_sale_price {}
     }
   }
   dimension: id {
-    description: ""
-    type: number
-  }
-  dimension: id1 {
     description: ""
     type: number
   }
