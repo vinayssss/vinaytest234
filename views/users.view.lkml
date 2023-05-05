@@ -74,7 +74,7 @@ view: users {
   dimension: state1 {
     link: {
       label: "Google"
-      url: "http://www.google.com/search?q={{ state }}"
+      url: "http://www.google.com/search?q={{ state1 }}"
       icon_url: "http://google.com/"
     }
   }
