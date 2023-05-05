@@ -1,5 +1,5 @@
-# If necessary, uncomment the line below to include explore_source.
-# include: "vinaytest234.model.lkml"
+#If necessary, uncomment the line below to include explore_source.
+#include: "vinaytest234.model.lkml"
 
 view: derived_tables {
   derived_table: {
@@ -16,5 +16,13 @@ view: derived_tables {
     description: ""
     value_format: "$#,##0"
     type: number
+  }
+  dimension: state {
+    type: string
+    sql: ${TABLE}.state ;;
+  }
+  filter: states {
+    type: string
+    suggest_dimension: state
   }
 }
