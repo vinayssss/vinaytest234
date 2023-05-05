@@ -19,6 +19,7 @@ view: users {
   }
 
   dimension: country {
+    hidden: yes
     type: string
     map_layer_name: countries
     sql: ${TABLE}.country ;;
