@@ -57,10 +57,12 @@ view: order_items {
     type: sum
     sql: ${sale_price} ;;
     html:
-    {% if value > 10 %}
+    {% if value > 500 %}
     <font color="darkgreen">{{ rendered_value }}</font>
-    {% elsif value > 11 %}
+    {% elsif value > 1000 %}
     <font color="goldenrod">{{ rendered_value }}</font>
+    {% elsif value > 1500 %}
+    <font color="brown">{{ rendered_value }}</font>
     {% else %}
     <font color="darkred">{{ rendered_value }}</font>
     {% endif %} ;;
