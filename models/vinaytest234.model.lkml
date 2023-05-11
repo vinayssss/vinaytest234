@@ -126,7 +126,7 @@ explore: orders {
 }
 
 explore: order_items {
-  sql_always_having: ${orders.count}>=5;;
+  sql_always_having: ${total_sale_price} >= 500;;
   join: orders {
     type: left_outer
     sql_on: ${order_items.order_id} = ${orders.id} ;;
