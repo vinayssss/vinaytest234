@@ -14,7 +14,7 @@ explore: +order_items {
     query: order_count_year {
       dimensions: [orders.created_year]
       measures: [orders.count]
-      timezone: "UTC"
+      #timezone: "UTC"
     }
 
 
@@ -126,6 +126,7 @@ explore: orders {
 }
 
 explore: order_items {
+  sql_always_having: ${orders.count}.count} >5;;
   join: orders {
     type: left_outer
     sql_on: ${order_items.order_id} = ${orders.id} ;;
