@@ -51,6 +51,7 @@ view: users {
 
   dimension: gender {
     type: string
+    hidden: yes
     sql: ${TABLE}.gender ;;
   }
 
