@@ -38,6 +38,19 @@ view: users {
     ]
     sql: ${TABLE}.created_at ;;
   }
+  measure: avg_time {
+    type: average
+    sql: ${created_time} ;;
+    value_format_name: decimal_2
+  }
+  measure: avg_time1 {
+    type: average
+    sql: ${created_time} ;;
+
+    html: {% assign seconds=value | modulo: 60 %}
+
+      {{ value | divided_by: 60 | floor }}:{% if seconds < 10 %}0{% endif %}{{ seconds }} ;;
+  }
 
   dimension: email {
     type: string
